@@ -19,7 +19,7 @@ public:
     }
     ~Count() {}
 
-    int64_t getCount() const { return cnt_; }
+    int64_t getCountWithoutLock() const { return cnt_; }
 
     void unlockAddOne() { cnt_ += 1; }
     void unlockAddN(int n);

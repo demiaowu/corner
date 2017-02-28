@@ -10,7 +10,7 @@
 
 class MutexLockGuard : public nocopyable {
 public:
-    explicit MutexLockGuard(MutexLock& mutex) :mutex_(mutex) {
+    MutexLockGuard(MutexLock& mutex) :mutex_(mutex) {
         mutex_.lock();
     }
 

@@ -9,14 +9,14 @@
 
 TEST(CountTest, unlockAddOneMethod) {
     Count cnt;
-    EXPECT_EQ(0, cnt.getCount());
+    EXPECT_EQ(0, cnt.getCountWithoutLock());
     cnt.unlockAddOne();
-    EXPECT_EQ(1, cnt.getCount());
+    EXPECT_EQ(1, cnt.getCountWithoutLock());
 }
 
 TEST(CountTest, unlockAddNMethod) {
     Count cnt;
-    EXPECT_EQ(0, cnt.getCount());
+    EXPECT_EQ(0, cnt.getCountWithoutLock());
     cnt.unlockAddN(4);
-    EXPECT_EQ(4, cnt.getCount());
+    EXPECT_EQ(4, cnt.getCountWithoutLock());
 }
