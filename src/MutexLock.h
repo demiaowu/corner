@@ -10,20 +10,22 @@
 
 #include "nocopyable.h"
 
+class Condition;
+
 class MutexLock : public nocopyable{
 public:
     MutexLock();
-    virtual ~MutexLock();
+    ~MutexLock();
 
-    void lock() const;
-    void unlock() const;
+    void lock();
+    void unlock();
 
-    pthread_mutex_t* getPthreadMutex() {
-        return &mutex_;
-    }
+    // The Condition class have been set as the friend class, so the method can be delete
+    pthread_mutex_t* getPthreadMutex() = delete;
 
 private:
-    mutable pthread_mutex_t mutex_;
+    friend class Condition;
+    pthread_mutex_t mutex_;
 };
 
 

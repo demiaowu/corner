@@ -23,7 +23,7 @@ public:
     }
 
     void wait() {
-        pthread_cond_wait(&cond_, mutex_.getPthreadMutex());
+        pthread_cond_wait(&cond_, &mutex_.mutex_);
     }
 
     //TODO
