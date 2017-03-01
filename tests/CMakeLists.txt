@@ -5,8 +5,10 @@ set(SOURCE_FILES
 add_executable(corner_unit_test ${SOURCE_FILES})
 
 
+
 target_link_libraries(corner_unit_test
-        /home/demiaowu/gtest/googletest/googletest/make/gtest_main.a     #Modify it to your path of the gtest.a
         corner_lib
+
+        gtest_main     #Modify it to your path of the gtest.a
         pthread)     #the lib of pthread must be place the last.
 

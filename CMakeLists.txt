@@ -3,13 +3,16 @@ project(mytest)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(/home/demiaowu/gtest/googletest/googletest/include
-        ${PROJECT_SOURCE_DIR}/src
+set(GOOGLE_TEST_DIR /home/demiaowu/gtest/googletest)    #The home dir of the google test.
+
+include_directories(${GOOGLE_TEST_DIR}/googletest/include
+        ${PROJECT_SOURCE_DIR}/corner
         ${PROJECT_SOURCE_DIR}/tests)
+link_directories(${GOOGLE_TEST_DIR}/googletest/make)
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH  ${PROJECT_BINARY_DIR}/lib)
 
-add_subdirectory(src)
+add_subdirectory(corner)
 add_subdirectory(tests)
 
