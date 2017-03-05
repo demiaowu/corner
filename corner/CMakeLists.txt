@@ -8,7 +8,8 @@ set(SOURCE_FILES
         SpinLock.h
         RWLock.h
         FastLock.h
-        Locks.h)
+        Locks.h
+        Slice.h)
 
 # dynamic library
 #add_library(corner_lib SHARED ${SOURCE_FILES})
