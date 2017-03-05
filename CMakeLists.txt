@@ -13,6 +13,9 @@ link_directories(${GOOGLE_TEST_DIR}/googletest/make)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH  ${PROJECT_BINARY_DIR}/lib)
 
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -fno-access-control")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -O2")
+
 add_subdirectory(corner)
 add_subdirectory(tests)
 

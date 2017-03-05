@@ -9,7 +9,8 @@ set(SOURCE_FILES
         RWLock.h
         FastLock.h
         Locks.h
-        Slice.h)
+        Slice.h
+        Status.cpp Status.h)
 
 # dynamic library
 #add_library(corner_lib SHARED ${SOURCE_FILES})

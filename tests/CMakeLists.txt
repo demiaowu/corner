@@ -1,6 +1,8 @@
 set(SOURCE_FILES
         Count_test.cpp
-        Slice_test.cpp Scope_test.cpp)
+        Slice_test.cpp
+        Scope_test.cpp
+        Status_test.cpp)
 
 
 add_executable(corner_unit_test ${SOURCE_FILES})
