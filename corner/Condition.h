@@ -2,8 +2,8 @@
 // Created by demiaowu on 17-2-28.
 //
 
-#ifndef MYTEST_CONDITION_H
-#define MYTEST_CONDITION_H
+#ifndef CORNER_CONDITION_H
+#define CORNER_CONDITION_H
 
 
 #include <sys/param.h>
@@ -43,4 +43,4 @@ private:
 };
 
 
-#endif //MYTEST_CONDITION_H
+#endif //CORNER_CONDITION_H

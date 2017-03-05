@@ -2,8 +2,8 @@
 // Created by demiaowu on 17-2-28.
 //
 
-#ifndef MYTEST_SPINLOCK_H
-#define MYTEST_SPINLOCK_H
+#ifndef CORNER_SPINLOCK_H
+#define CORNER_SPINLOCK_H
 
 #include <sys/param.h>
 #include <pthread.h>
@@ -35,4 +35,4 @@ private:
     pthread_spinlock_t lock_;
 };
 
-#endif //MYTEST_SPINLOCK_H
+#endif //CORNER_SPINLOCK_H

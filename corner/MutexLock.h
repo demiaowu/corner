@@ -2,8 +2,8 @@
 // Created by demiaowu on 17-2-28.
 //
 
-#ifndef MYTEST_MUTEXLOCK_H
-#define MYTEST_MUTEXLOCK_H
+#ifndef CORNER_MUTEXLOCK_H
+#define CORNER_MUTEXLOCK_H
 
 
 #include <sys/types.h>

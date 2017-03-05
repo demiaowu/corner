@@ -2,8 +2,8 @@
 // Created by demiaowu on 17-3-5.
 //
 
-#ifndef MYTEST_SLICE_H
-#define MYTEST_SLICE_H
+#ifndef CORNER_SLICE_H
+#define CORNER_SLICE_H
 
 #include <cstddef>
 #include <cstring>
@@ -50,4 +50,4 @@ private:
     size_t size_;
 };
 
-#endif //MYTEST_SLICE_H
+#endif //CORNER_SLICE_H

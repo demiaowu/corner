@@ -2,8 +2,8 @@
 // Created by demiaowu on 17-2-28.
 //
 
-#ifndef MYTEST_COUNTDOWNLATCH_H
-#define MYTEST_COUNTDOWNLATCH_H
+#ifndef CORNER_COUNTDOWNLATCH_H
+#define CORNER_COUNTDOWNLATCH_H
 
 
 #include "nocopyable.h"
@@ -23,4 +23,4 @@ private:
 };
 
 
-#endif //MYTEST_COUNTDOWNLATCH_H
+#endif //CORNER_COUNTDOWNLATCH_H

@@ -14,5 +14,5 @@ target_link_libraries(corner_unit_test
         corner_lib
 
         gtest_main     #Modify it to your path of the gtest.a
-        pthread)     #the lib of pthread must be place the last.
+        pthread)       #the lib of pthread must be place the last.
 

@@ -2,8 +2,8 @@
 // Created by demiaowu on 17-2-28.
 //
 
-#ifndef MYTEST_NOCOPYABLE_H
-#define MYTEST_NOCOPYABLE_H
+#ifndef CORNER_NOCOPYABLE_H
+#define CORNER_NOCOPYABLE_H
 
 class nocopyable {
 public:

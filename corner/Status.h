@@ -2,8 +2,8 @@
 // Created by demiaowu on 17-3-5.
 //
 
-#ifndef MYTEST_STATUS_H
-#define MYTEST_STATUS_H
+#ifndef CORNER_STATUS_H
+#define CORNER_STATUS_H
 
 
 #include "Slice.h"

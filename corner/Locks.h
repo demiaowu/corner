@@ -2,8 +2,8 @@
 // Created by demiaowu on 17-3-1.
 //
 
-#ifndef MYTEST_LOCKS_H
-#define MYTEST_LOCKS_H
+#ifndef CORNER_LOCKS_H
+#define CORNER_LOCKS_H
 
 #include "FastLock.h"
 #include "MutexLock.h"

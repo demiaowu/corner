@@ -14,4 +14,6 @@ TEST(StatusTest, cons) {
     EXPECT_TRUE(st2.isIoError());
     std::cout << "\ncode: " << st2.code() << std::endl;
     EXPECT_STREQ("IoError", st2.ToString().c_str());
+
+    Status st3 = st2;
 }

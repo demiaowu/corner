@@ -2,8 +2,8 @@
 // Created by root on 17-2-28.
 //
 
-#ifndef MYTEST_COUNT_H
-#define MYTEST_COUNT_H
+#ifndef CORNER_COUNT_H
+#define CORNER_COUNT_H
 
 #include <cstdint>
 
@@ -32,4 +32,4 @@ private:
 };
 
 
-#endif //MYTEST_COUNT_H
+#endif //CORNER_COUNT_H

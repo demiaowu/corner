@@ -2,8 +2,8 @@
 // Created by demiaowu on 17-2-28.
 //
 
-#ifndef MYTEST_RWLOCK_H
-#define MYTEST_RWLOCK_H
+#ifndef CORNER_RWLOCK_H
+#define CORNER_RWLOCK_H
 
 #include <sys/param.h>
 #include <pthread.h>
@@ -62,4 +62,4 @@ private:
     RWLock& lock_;
 };
 
-#endif //MYTEST_RWLOCK_H
+#endif //CORNER_RWLOCK_H
