@@ -5,7 +5,6 @@
 #ifndef CORNER_STATUS_H
 #define CORNER_STATUS_H
 
-
 #include "Slice.h"
 
 const char* CopyState(const char* s);
@@ -70,9 +69,10 @@ private:
 };
 
 inline Status::Status(const Status &s) {
-    state_ = (nullptr == state_) ? nullptr : CopyState(s.state_);
+    state_ = (nullptr == s.state_) ? nullptr : CopyState(s.state_);
 }
 
+// Not support a=b=c
 inline void Status::operator=(const Status &s) {
     if (state_ != s.state_) {
         delete[] state_;

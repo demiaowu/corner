@@ -16,4 +16,5 @@ TEST(StatusTest, cons) {
     EXPECT_STREQ("IoError", st2.ToString().c_str());
 
     Status st3 = st2;
+    EXPECT_TRUE(st3.isIoError());
 }

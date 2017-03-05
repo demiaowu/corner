@@ -7,8 +7,8 @@
 const char* CopyState(const char* s) {
     int32_t size;
     memcpy(&size, s, sizeof(size));
-    char* result;
-    memcpy(result, s+5, size);
+    char* result = new char[size+5];
+    memcpy(result, s, size+5);
 
     return result;
 }
