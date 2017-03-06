@@ -5,7 +5,8 @@ set(SOURCE_FILES
         Status_test.cpp
         Singleton_test.cpp
         Atomic_test.cpp
-        ThreadLocal_test.cpp)
+        ThreadLocal_test.cpp
+        utiltest.h)
 
 
 add_executable(corner_unit_test ${SOURCE_FILES})
