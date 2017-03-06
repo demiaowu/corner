@@ -6,7 +6,8 @@ set(SOURCE_FILES
         Singleton_test.cpp
         Atomic_test.cpp
         ThreadLocal_test.cpp
-        utiltest.h)
+        testutil.h
+        BoundedBlockQueue_test.cpp)
 
 
 add_executable(corner_unit_test ${SOURCE_FILES})
@@ -16,6 +17,6 @@ add_executable(corner_unit_test ${SOURCE_FILES})
 target_link_libraries(corner_unit_test
         corner_lib
 
-        gtest_main     #Modify it to your path of the gtest.a
-        pthread)       #the lib of pthread must be place the last.
+        gtest_main
+        pthread)       # lib of pthread must be place the last.
 

@@ -13,7 +13,8 @@ set(SOURCE_FILES
         Status.cpp Status.h
         Singleton.h
         Atomic.h
-        ThreadLocal.h)
+        ThreadLocal.h
+        BoundedBlockQueue.h)
 
 # dynamic library
 #add_library(corner_lib SHARED ${SOURCE_FILES})

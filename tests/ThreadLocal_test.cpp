@@ -8,11 +8,12 @@
 #include <Count.h>
 #include <ThreadLocal.h>
 
-#include <utiltest.h>
+#include <testutil.h>
+#include <thread>
 
 ThreadLocal<Count> cnt;
 std::vector<pthread_t> pts;
-std::vector<int64_t> cnts;
+std::vector<Count::value_type > cnts;
 
 void* fun_(void*) {
     cnt.value().unlockAddOne();
@@ -32,8 +33,9 @@ TEST(ThreadLocalTest, usage) {
     EXPECT_EQ(0, status);
 
 
+    // Must
+    sleep(2);   // Must
 
-    sleep(2);   //
     EXPECT_EQ(0, cnt.value().getCountWithoutLock());
     EXPECT_EQ(1, cnts[0]);
     EXPECT_EQ(1, cnts[1]);
@@ -46,4 +48,26 @@ TEST(ThreadLocalTest, usage) {
 
 
 //    pthread_exit(0);
+}
+
+std::map<std::thread::id, Count::value_type> cntMap;
+
+void* fun2_() {
+    cnt.value().unlockAddOne();
+    cntMap.insert(std::make_pair(std::this_thread::get_id(), cnt.value().getCountWithoutLock()));
+}
+
+TEST(ThreadLocalTest, cpp11usage) {
+    std::thread t1(fun2_);
+    std::thread t2(fun2_);
+
+    sleep(2);
+
+    CUTOFFLINE("cntmap")
+    std::cout << cntMap.find(t1.get_id())->first << " : " << cntMap.find(t2.get_id())->second << std::endl;
+    EXPECT_EQ(1, cntMap.find(t1.get_id())->second);
+    EXPECT_EQ(1, cntMap.find(t2.get_id())->second);
+
+    t1.join();
+    t2.join();
 }

@@ -13,10 +13,9 @@
 
 class Count : public nocopyable{
 public:
+    typedef int64_t value_type;
     Count(): cnt_(0),
-             mutex_()
-    {
-    }
+             mutex_() { }
     ~Count() {}
 
     int64_t getCountWithoutLock() const { return cnt_; }
