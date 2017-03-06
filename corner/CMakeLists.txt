@@ -12,7 +12,8 @@ set(SOURCE_FILES
         Slice.h
         Status.cpp Status.h
         Singleton.h
-        Atomic.h)
+        Atomic.h
+        ThreadLocal.h)
 
 # dynamic library
 #add_library(corner_lib SHARED ${SOURCE_FILES})

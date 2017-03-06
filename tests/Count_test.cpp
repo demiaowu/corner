@@ -12,6 +12,8 @@ TEST(CountTest, unlockAddOneMethod) {
     EXPECT_EQ(0, cnt.getCountWithoutLock());
     cnt.unlockAddOne();
     EXPECT_EQ(1, cnt.getCountWithoutLock());
+    cnt.unlockAddOne();
+    EXPECT_EQ(2, cnt.getCountWithoutLock());
 }
 
 TEST(CountTest, unlockAddNMethod) {

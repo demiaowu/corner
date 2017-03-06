@@ -3,7 +3,9 @@ set(SOURCE_FILES
         Slice_test.cpp
         Scope_test.cpp
         Status_test.cpp
-        Singleton_test.cpp Atomic_test.cpp)
+        Singleton_test.cpp
+        Atomic_test.cpp
+        ThreadLocal_test.cpp)
 
 
 add_executable(corner_unit_test ${SOURCE_FILES})
