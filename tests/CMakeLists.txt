@@ -7,7 +7,8 @@ set(SOURCE_FILES
         Atomic_test.cpp
         ThreadLocal_test.cpp
         testutil.h
-        BoundedBlockQueue_test.cpp)
+        BoundedBlockQueue_test.cpp
+        BlockQueue_test.cpp)
 
 
 add_executable(corner_unit_test ${SOURCE_FILES})
