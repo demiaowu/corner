@@ -15,7 +15,9 @@ set(SOURCE_FILES
         Atomic.h
         ThreadLocal.h
         BoundedBlockQueue.h
-        BlockQueue_test.h)
+        BlockQueue.h
+        ThreadLocalSingleton.h
+        ThreadPool.cpp ThreadPool.h)
 
 # dynamic library
 #add_library(corner_lib SHARED ${SOURCE_FILES})
