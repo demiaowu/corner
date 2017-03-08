@@ -15,10 +15,16 @@ ThreadLocal<Count> cnt;
 std::vector<pthread_t> pts;
 std::vector<Count::value_type > cnts;
 
+void _fun_() {
+    cnt.value().unlockAddN(11);
+}
+
 void* fun_(void*) {
     cnt.value().unlockAddOne();
+    _fun_();
     cnts.push_back(cnt.value().getCountWithoutLock());
     pts.push_back(pthread_self());
+
 }
 
 TEST(ThreadLocalTest, usage) {
@@ -37,8 +43,8 @@ TEST(ThreadLocalTest, usage) {
     sleep(2);   // Must
 
     EXPECT_EQ(0, cnt.value().getCountWithoutLock());
-    EXPECT_EQ(1, cnts[0]);
-    EXPECT_EQ(1, cnts[1]);
+    EXPECT_EQ(12, cnts[0]);
+    EXPECT_EQ(12, cnts[1]);
 
     CUTOFFLINE("pts")
     std::cout << "pts size: " << pts.size() << std::endl;

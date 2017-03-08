@@ -8,7 +8,11 @@ set(SOURCE_FILES
         ThreadLocal_test.cpp
         testutil.h
         BoundedBlockQueue_test.cpp
-        BlockQueue_test.cpp)
+        BlockQueue.cpp
+        ThreadPool_test.cpp
+        CornerTestEnvironment.h
+        GoogleTest_test.cpp
+        CornerMain_test.cpp)
 
 
 add_executable(corner_unit_test ${SOURCE_FILES})
@@ -18,6 +22,6 @@ add_executable(corner_unit_test ${SOURCE_FILES})
 target_link_libraries(corner_unit_test
         corner_lib
 
-        gtest_main
+        gtest
         pthread)       # lib of pthread must be place the last.
 

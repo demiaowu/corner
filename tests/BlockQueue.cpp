@@ -4,7 +4,7 @@
 
 #include <gtest/gtest.h>
 
-#include "BlockQueue_test.h"
+#include "BlockQueue.h"
 
 TEST(BlockQueueTest, usage) {
     BlockQueue<int> bq;
