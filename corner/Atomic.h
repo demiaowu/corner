@@ -158,4 +158,7 @@ public:
     volatile int32_t value_;
 };
 
+//TODO
+// class AtomicInt64 {};
+
 #endif //CORNER_ATOMIC_H
