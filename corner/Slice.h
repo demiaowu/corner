@@ -30,6 +30,10 @@ public:
 
     const char* data() const { return data_; }
 
+    const char* c_str() const {
+        return data_;
+    }
+
     bool empty() const { return (0 == size_); }
 
     void clear() {
@@ -50,4 +54,25 @@ private:
     size_t size_;
 };
 
+// Used for C-style string argument to a function
+// char*, std::string, StringArg can be adaptor
+class StringArg {
+public:
+    StringArg(const char* str) :
+            str_(str){
+    }
+    StringArg(const std::string& str):
+            str_(str.c_str()) {
+    }
+    StringArg(const Slice& slice) :
+            str_(slice.c_str()) {
+    }
+
+    const char* c_str() const {
+        return str_;
+    }
+
+private:
+    const char* str_;
+};
 #endif //CORNER_SLICE_H

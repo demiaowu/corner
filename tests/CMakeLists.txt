@@ -12,7 +12,7 @@ set(SOURCE_FILES
         ThreadPool_test.cpp
         CornerTestEnvironment.h
         GoogleTest_test.cpp
-        CornerMain_test.cpp)
+        CornerMain_test.cpp FileUtil_test.cpp)
 
 
 add_executable(corner_unit_test ${SOURCE_FILES})
