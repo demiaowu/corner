@@ -19,7 +19,7 @@ set(SOURCE_FILES
         ThreadLocalSingleton.h
         ThreadPool.cpp ThreadPool.h
         FileUtil.cpp FileUtil.h
-        Logging.cpp Logging.h)
+        Logging.cpp Logging.h LogFile.cpp LogFile.h)
 
 # dynamic library
 #add_library(corner_lib SHARED ${SOURCE_FILES})

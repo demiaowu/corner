@@ -25,3 +25,8 @@ TEST(MyTestCab,usage) {
     EXPECT_TRUE(1);
 }
 
+TEST(MyTestTime, usage) {
+    time_t now = time(nullptr);
+    std::cout << now << std::endl;
+}
+
