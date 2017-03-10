@@ -56,7 +56,7 @@ int FileUtil::ReadSmallFile::readToBuffer(int *size) {
     return err_;
 }
 
-FileUtil::AppendFile(const StringArg& filename)
+FileUtil::AppendFile::AppendFile(const StringArg& filename)
         :fp_(::fopen(filename.c_str(), "ae")),
          writtenBytes_(0) {
     ::setbuffer(fp_, buffer_, sizeof(buffer_));
