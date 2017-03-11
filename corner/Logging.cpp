@@ -31,7 +31,11 @@ const char* LogLevelNames[Logger::NUM_LOG_LEVELS] = {
 };
 
 Logger::~Logger() {
-    g_output(stream_.oss_.str().c_str(), stream_.oss_.str().size());
+    // ' ' -> '\n'
+    std::string result = stream_.oss_.str();
+    result.pop_back();      // pop the char of blank
+    result.push_back('\n'); // push '\n' on the last of the log string
+    g_output(result.c_str(), result.size());
     if (level_ == FATAL) {
         g_flush();
         ::abort();

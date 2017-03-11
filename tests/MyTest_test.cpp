@@ -30,3 +30,8 @@ TEST(MyTestTime, usage) {
     std::cout << now << std::endl;
 }
 
+TEST(MyTestString, usage) {
+    std::string str("nihao");
+    str[4] = 'a';
+
+}

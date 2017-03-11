@@ -68,13 +68,19 @@ private:
 #define LOG_INFO if( Logger::logLevel() <= Logger::INFO ) \
     Logger(__FILE__, __LINE__, Logger::INFO, __func__).stream()
 
-#define LOG_WARN if( Logger::logLevel() <= Logger::WARN ) \
-    Logger(__FILE__, __LINE__, Logger::WARN, __func__).stream()
+#define LOG_WARN Logger(__FILE__, __LINE__, Logger::WARN, __func__).stream()
 
-#define LOG_ERROR if( Logger::logLevel() <= Logger::ERROR ) \
-    Logger(__FILE__, __LINE__, Logger::ERROR, __func__).stream()
+#define LOG_ERROR Logger(__FILE__, __LINE__, Logger::ERROR, __func__).stream()
 
-#define LOG_FATAL if( Logger::logLevel() <= Logger::FATAL ) \
-    Logger(__FILE__, __LINE__, Logger::FATAL, __func__).stream()
+#define LOG_FATAL Logger(__FILE__, __LINE__, Logger::FATAL, __func__).stream()
+
+//#define LOG_WARN if( Logger::logLevel() <= Logger::WARN ) \
+//    Logger(__FILE__, __LINE__, Logger::WARN, __func__).stream()
+//
+//#define LOG_ERROR if( Logger::logLevel() <= Logger::ERROR ) \
+//    Logger(__FILE__, __LINE__, Logger::ERROR, __func__).stream()
+//
+//#define LOG_FATAL if( Logger::logLevel() <= Logger::FATAL ) \
+//    Logger(__FILE__, __LINE__, Logger::FATAL, __func__).stream()
 
 #endif //CORNER_LOGGING_H
